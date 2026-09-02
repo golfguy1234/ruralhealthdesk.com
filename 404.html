@@ -4,15 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#1E3A2A">
+<meta name="theme-color" content="#FCFBF7">
 <title>Page not found | Rural Health Desk</title>
-<meta name="description" content="Rural Health Desk tracks the CMS Rural Health Transformation Program across all fifty states and links the awards the states publish to the rural health organizations behind them and to the vendors who sell what they fund.">
+<meta name="description" content="That page is not here. The Rural Health Desk is one page at ruralhealthdesk.com.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="Page not found | Rural Health Desk">
-<meta property="og:description" content="Rural Health Desk tracks the CMS Rural Health Transformation Program across all fifty states and links the awards the states publish to the rural health organizations behind them and to the vendors who sell what they fund.">
-<meta property="og:image" content="https://ruralhealthdesk.com/assets/og-card.png">
-<meta property="og:url" content="https://ruralhealthdesk.com/404.html">
+<meta property="og:site_name" content="Rural Health Desk">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ruralhealthdesk.com/404.html">
+<meta property="og:title" content="Page not found | Rural Health Desk">
+<meta property="og:description" content="That page is not here. The Rural Health Desk is one page at ruralhealthdesk.com.">
+<meta property="og:image" content="https://ruralhealthdesk.com/assets/og-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rural Health Desk: the entire rural health transformation program, tracked and matched.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/literata-400.woff2" as="font"
 type="font/woff2" crossorigin>
@@ -22,12 +28,86 @@ type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/assets/manifest.webmanifest">
-<link rel="stylesheet" href="/assets/site.css">
+<style>
+@font-face{font-family:'Public Sans';font-style:normal;
+font-weight:400 800;font-display:swap;
+src:url(/assets/fonts/public-sans.woff2) format('woff2')}
+@font-face{font-family:Literata;font-style:normal;font-weight:400 700;
+font-display:swap;src:url(/assets/fonts/literata-400.woff2) format('woff2')}
+@font-face{font-family:'Literata Fallback';src:local('Georgia');
+size-adjust:108.5%;ascent-override:108.5%;descent-override:28.4%;
+line-gap-override:0%}
+@font-face{font-family:'Public Sans Fallback';
+src:local('Arial Bold'),local('Arial-BoldMT');
+size-adjust:102.95%;ascent-override:92.28%;descent-override:21.85%;
+line-gap-override:0%}
+:root{--measure:700px;--pagepad:clamp(20px,5vw,40px);
+--section:clamp(56px,4vw + 40px,96px);
+--sans:'Public Sans','Public Sans Fallback',Arial,sans-serif;
+--paper:#FCFBF7;--ink:#20241F;--muted:#5A6055;
+--field:#1E3A2A;--field-text:#F7F5EF;--field-dim:#C9D3C6;
+--wheat:#C9A227;--edge:#E4E2D8}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.btn{transition:none}}
+body{background:var(--paper);color:var(--ink);
+font-family:Literata,'Literata Fallback',Georgia,serif;
+font-size:1.1875rem;line-height:1.55;padding:0 var(--pagepad)}
+h1,h2{font-family:var(--sans);line-height:1.1;text-wrap:balance}
+h1{font-weight:800;letter-spacing:-.015em;
+font-size:clamp(2.1rem, 1.2rem + 3.4vw, 3.4rem)}
+h2{font-weight:700;font-size:clamp(1.45rem, 1.2rem + .9vw, 1.7rem);
+letter-spacing:-.01em;margin-block:var(--section) 20px}
+p{margin:0 0 1.1em;max-inline-size:var(--measure);text-wrap:pretty}
+p:last-child{margin-bottom:0}
+ul.classes{columns:2;column-gap:32px;padding-left:1.2em;
+margin-block:0 1.1em}
+ul.classes li{break-inside:avoid;padding-left:.2em}
+a{color:var(--field);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--field);outline-offset:2px}
+.hero :focus-visible{outline-color:var(--wheat)}
+.btn:focus-visible{outline-color:var(--field-text)}
+main>*{max-inline-size:var(--measure);margin-inline:auto}
+header,footer{max-inline-size:var(--measure);margin-inline:auto}
+header{padding:22px 0}
+.mark{font-family:var(--sans);font-weight:800;font-size:1.05rem;
+color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.hero{background:var(--field);color:var(--field-text);
+max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
+padding-inline:var(--pagepad);padding-block:88px 92px}
+.hero>div{max-inline-size:var(--measure);margin-inline:auto}
+.hero h1{color:var(--field-text);margin-bottom:26px}
+main>h1.plain{margin-top:64px;font-size:1.9rem}
+.hero p{color:var(--field-dim);font-size:1.25rem}
+.hero .go{margin-top:36px;display:flex;align-items:center;
+gap:12px 20px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--wheat);color:var(--ink);
+font-family:var(--sans);font-weight:700;font-size:1.05rem;
+padding:14px 28px;border-radius:4px;text-decoration:none;
+transition:filter .15s ease}
+.btn:hover{filter:brightness(1.12)}
+.hero .go span{color:var(--field-dim);font-size:1.05rem}
+.who{display:flow-root}
+.who img{float:right;width:168px;height:auto;border-radius:6px;
+margin:4px 0 16px 32px}
+.who p+p{clear:right}
+footer{margin-top:var(--section);padding:26px 0 44px;color:var(--muted);
+font-size:.95rem;border-top:1px solid var(--edge)}
+footer p{max-inline-size:none}
+@media (max-width:640px){
+.hero{padding-block:48px 56px}
+.hero h1{margin-bottom:20px}
+.hero p{font-size:1.125rem}
+.hero .go{margin-top:28px}
+.who img{float:none;display:block;width:140px;margin:0 0 24px}
+ul.classes{columns:1}
+body{font-size:1.0625rem}}
+</style>
 </head>
 <body>
 <header>
 <a class="mark" href="/">Rural Health Desk</a>
-<a class="mail" href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>
 </header>
 <main>
 <h1 class="plain">That page is not here</h1>
@@ -36,7 +116,7 @@ type="font/woff2" crossorigin>
 <a href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>.</p>
 </main>
 <footer>
-<p>Justin Brilliant runs the Rural Health Desk independently.</p>
+<p>I run the Rural Health Desk on my own.</p>
 </footer>
 </body>
 </html>
