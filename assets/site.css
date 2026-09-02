@@ -60,4 +60,5 @@ footer{margin-top:110px;padding:26px 0 44px;color:var(--muted);
 font-size:.95rem;border-top:1px solid var(--edge)}
 footer p{max-inline-size:none}
 @media (max-width:640px){.who{flex-direction:column}
+.who>div{flex-basis:auto}
 .hero{padding-block:64px 68px}}
