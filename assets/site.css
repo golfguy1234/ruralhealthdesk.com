@@ -1,170 +1,64 @@
-/* Rural Health Desk - one stylesheet, no dependencies.
-   Tokens per docs/site-spec-2026-09-01.json. --measure is 65ch of
-   19px Literata (zero-advance .579em: 65 x .579 x 19 = 715px), held
-   in px so small-type blocks (footer, metadata) keep the same column
-   as body text (design review finding 4). */
+@font-face{font-family:'Public Sans';font-style:normal;
+font-weight:400 800;font-display:swap;
+src:url(fonts/public-sans.woff2) format('woff2')}
 @font-face{font-family:Literata;font-style:normal;font-weight:400 700;
-font-display:swap;src:url(fonts/literata-400.woff2) format("woff2")}
+font-display:swap;src:url(fonts/literata-400.woff2) format('woff2')}
 @font-face{font-family:Literata;font-style:italic;font-weight:400;
-font-display:swap;src:url(fonts/literata-400i.woff2) format("woff2")}
-
-:root{color-scheme:light dark;--measure:715px;
---pagepad:clamp(16px,5vw,32px);
---paper:#FAF7F2;--ink:#211D19;--muted:#5C554B;--accent:#8A3B1C;
---hairline:#E3DCD0;--quote-bg:#F3EEE5;
---hero-bg:#8A3B1C;--hero-fg:#FAF7F2;--hero-dim:#F3D9CD;
---hero-btn-bg:#FAF7F2;--hero-btn-fg:#8A3B1C}
-@media (prefers-color-scheme:dark){:root{
---paper:#1C1917;--ink:#EDE7DC;--muted:#A89F91;--accent:#D98B66;
---hairline:#38322B;--quote-bg:#26211D;
---hero-bg:#6E2F16;--hero-fg:#EDE7DC;--hero-dim:#D9B8A5;
---hero-btn-bg:#D98B66;--hero-btn-fg:#1C1917}}
-
+font-display:swap;src:url(fonts/literata-400i.woff2) format('woff2')}
+:root{--measure:700px;--pagepad:clamp(20px,5vw,40px);
+--paper:#FCFBF7;--ink:#20241F;--muted:#5A6055;
+--field:#1E3A2A;--field-text:#F7F5EF;--field-dim:#C9D3C6;
+--wheat:#C9A227;--edge:#E4E2D8}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--paper);color:var(--ink);
-font-family:Literata,Charter,"Bitstream Charter","Sitka Text",Cambria,
-Georgia,serif;font-size:1.1875rem;line-height:1.45;
-padding:0 var(--pagepad)}
-main{display:block;padding-bottom:96px}
+font-family:Literata,Charter,Cambria,Georgia,serif;
+font-size:1.1875rem;line-height:1.55;padding:0 var(--pagepad)}
+h1,h2{font-family:'Public Sans','Segoe UI',system-ui,sans-serif;
+line-height:1.1;text-wrap:balance}
+h1{font-weight:800;letter-spacing:-.015em;
+font-size:clamp(2.1rem,1.2rem+3.4vw,3.4rem)}
+h2{font-weight:700;font-size:1.4rem;margin:96px 0 20px}
+p{margin:0 0 1.1em;max-inline-size:var(--measure)}
+p:last-child{margin-bottom:0}
+a{color:var(--field);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--field);outline-offset:2px}
+.hero :focus-visible{outline-color:var(--wheat)}
 main>*{max-inline-size:var(--measure);margin-inline:auto}
-[id]{scroll-margin-block-start:24px}
-
-h1,h2,h3{font-weight:700;line-height:1.15;text-wrap:balance}
-h1{font-size:clamp(1.9rem,1.3rem+2.5vw,3rem);margin:48px auto 24px}
-h2{font-size:clamp(1.25rem,1.05rem+.9vw,1.5rem);margin:64px auto 16px}
-p{margin:0 auto 16px}
-ul{margin:0 auto 16px;padding-left:24px}
-li{margin-bottom:8px}
-a{color:var(--accent);text-decoration-thickness:1px;
-text-underline-offset:2px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-
-.nav{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;
-padding:24px 0;max-inline-size:var(--measure);margin-inline:auto}
-.nav .mark{font-weight:700;letter-spacing:.06em;font-size:.9375rem;
-text-transform:uppercase;color:var(--ink);text-decoration:none;
-margin-right:auto}
-.nav a:not(.mark){font-size:.9375rem;color:var(--muted)}
-.nav a:not(.mark):hover{color:var(--accent)}
-.nav a[aria-current="page"]{color:var(--ink);text-decoration:none}
-
-.figures{display:flex;flex-wrap:wrap;gap:24px 48px;margin:32px auto 8px}
-.figures>div{min-width:10ch}
-.figures b{display:block;font-size:clamp(2rem,1.2rem+3vw,3.5rem);
-font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
-.figures span{color:var(--accent);font-size:.9375rem}
-.prov{color:var(--muted);font-size:.9375rem;margin-bottom:32px}
-
-blockquote{background:var(--quote-bg);border-left:3px solid var(--accent);
-font-style:italic;padding:16px 24px;margin:0 auto 16px;
-max-inline-size:var(--measure)}
-blockquote p:last-child{margin-bottom:0}
-
-hr{border:0;border-top:1px solid var(--hairline);margin:48px auto;
-max-inline-size:var(--measure)}
-.meta{color:var(--muted);font-size:.9375rem}
-.notes,.ledger{padding-left:0}
-.notes li,.ledger li{list-style:none}
-.notes b,.ledger b{font-weight:700;font-variant-numeric:tabular-nums}
-.ledger li{font-variant-numeric:tabular-nums}
-
-.amt{font-variant-numeric:tabular-nums}
-
-.portrait{display:block;width:min(280px,60%);height:auto;
-border-radius:2px;margin:0 0 24px}
-
-footer{border-top:1px solid var(--hairline);padding:24px 0 48px;
-color:var(--muted);line-height:1.55;
-max-inline-size:var(--measure);margin-inline:auto}
-footer p{font-size:.9375rem}
-footer a{color:var(--accent)}
-
-main>.band,main>.hero{max-inline-size:none}
-/* Full-bleed by cancelling the body padding, never with 50vw: vw
-   includes the classic scrollbar, which put an 8px horizontal
-   scrollbar and a 7.5px off-centre on every page (v4 verifier S1). */
-.band,.hero{margin-inline:calc(-1*var(--pagepad));
-padding-inline:var(--pagepad);padding-block:48px 56px;
-margin-block:0 48px}
-.band{background:var(--quote-bg)}
-.band>*,.hero>*{max-inline-size:var(--measure);margin-inline:auto}
-.band h1{margin-top:24px}
-.band h2{margin-top:0}
-.bandwrap{max-inline-size:var(--measure);margin-inline:auto}
-
-.hero{background:var(--hero-bg);color:var(--hero-fg);
-padding-block:64px 64px}
-.hero h1{margin-top:16px;color:var(--hero-fg);
-font-size:clamp(2rem,1.3rem+3vw,3.3rem)}
-.hero p{color:var(--hero-dim)}
-.hero .figures b{color:var(--hero-fg)}
-.hero .figures span{color:var(--hero-dim)}
-.hero .prov{color:var(--hero-dim);margin-bottom:24px}
-.hero a{color:var(--hero-fg)}
-.hero .btn{background:var(--hero-btn-bg);color:var(--hero-btn-fg)}
-.hero .btn:hover{text-decoration:none;filter:brightness(.97)}
-
-.btn{display:inline-block;background:var(--accent);color:var(--paper);
-padding:12px 24px;border-radius:6px;font-weight:700;
-text-decoration:none;font-size:1rem}
-.btn:hover{text-decoration:none;filter:brightness(1.08)}
-.btnrow{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-margin:24px auto;max-inline-size:min(1000px,100%)}
-@media (max-width:860px){.cards{grid-template-columns:1fr;
-max-inline-size:var(--measure)}}
-.card{border:1px solid var(--hairline);background:var(--paper);
-border-radius:8px;padding:24px}
-.card .num{display:block;font-size:.8125rem;letter-spacing:.06em;
-color:var(--accent);font-weight:700;margin-bottom:8px}
-.card h3{font-size:1.0625rem;font-weight:700;margin:0 0 8px}
-.card p{margin:0;font-size:1rem;color:var(--muted)}
-
-.panel{border:1px solid var(--hairline);border-radius:8px;
-padding:32px;margin:24px auto;max-inline-size:var(--measure);
-background:var(--paper)}
-.panel .viz{margin:16px 0 0;max-inline-size:none}
-
-.kicker{display:block;font-size:.8125rem;letter-spacing:.06em;
-text-transform:uppercase;color:var(--accent);font-weight:700;
-margin:64px auto 0;max-inline-size:var(--measure)}
-.kicker+h2{margin-top:8px}
-
-.excerpt{border:1px solid var(--hairline);background:var(--paper);
-padding:24px;margin:0 auto 24px;max-inline-size:var(--measure)}
-.excerpt .chip{display:block;font-size:.8125rem;letter-spacing:.06em;
-text-transform:uppercase;color:var(--accent);margin-bottom:8px;
-font-style:normal}
-.excerpt blockquote{background:none;border-left:none;padding:0;
-margin:0 0 8px}
-.excerpt p{margin-bottom:0}
-
-.viz{margin:24px auto;max-inline-size:var(--measure)}
-.viz svg{display:block;width:100%;height:auto}
-.viz .cap{color:var(--muted);font-size:.9375rem;margin-top:8px}
-.tile{fill:var(--quote-bg);stroke:var(--hairline)}
-.tile.on{fill:var(--accent);stroke:none}
-.tlab{font-size:11px;fill:var(--muted);text-anchor:middle;
-font-family:inherit}
-.tlab.on{fill:var(--paper);font-weight:700}
-.cline{fill:none;stroke:var(--accent);stroke-width:2}
-.cdot{fill:var(--accent)}
-.clab{font-size:12px;fill:var(--ink);font-family:inherit;
+header,footer{max-inline-size:var(--measure);margin-inline:auto}
+header{display:flex;justify-content:space-between;align-items:baseline;
+gap:16px;padding:22px 0;flex-wrap:wrap}
+.mark{font-family:'Public Sans',system-ui,sans-serif;font-weight:800;
+font-size:1.05rem;color:var(--ink);text-decoration:none;
+letter-spacing:-.01em}
+header a.mail{font-family:'Public Sans',system-ui,sans-serif;
+font-size:.95rem;text-decoration:none;color:var(--muted)}
+header a.mail:hover{color:var(--field);text-decoration:underline}
+.hero{background:var(--field);color:var(--field-text);
+max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
+padding-inline:var(--pagepad);padding-block:88px 92px}
+.hero>div{max-inline-size:var(--measure);margin-inline:auto}
+.hero h1{color:var(--field-text);margin-bottom:26px}
+main>h1.plain{margin-top:64px;font-size:1.9rem}
+.hero p{color:var(--field-dim);font-size:1.25rem}
+.hero .go{margin-top:36px;display:flex;align-items:center;gap:20px;
+flex-wrap:wrap}
+.btn{display:inline-block;background:var(--wheat);color:var(--ink);
+font-family:'Public Sans',system-ui,sans-serif;font-weight:700;
+font-size:1.05rem;padding:14px 28px;border-radius:4px;
+text-decoration:none}
+.btn:hover{filter:brightness(1.06)}
+.hero .go span{color:var(--field-dim);font-size:1.05rem}
+.who{display:flex;gap:40px;align-items:flex-start}
+.who>div{flex:1 1 380px;min-width:260px}
+.who img{width:min(220px,38vw);height:auto;border-radius:6px;
+flex:none}
+.registry b{font-family:'Public Sans',system-ui,sans-serif;
+font-size:1.05em;letter-spacing:-.01em;
 font-variant-numeric:tabular-nums}
-.cnote{font-size:12px;fill:var(--muted);font-family:inherit}
-.caxis{stroke:var(--hairline);stroke-width:1}
-
-.portrait-sm{float:right;width:96px;height:auto;border-radius:50%;
-margin:0 0 8px 24px}
-
-@media print{
-.nav{display:none}
-body{background:#fff;color:#000}
-a{color:#000}
-a[href^="http"]::after{content:" (" attr(href) ")";font-size:.8em}
-blockquote{background:none;border-left:2px solid #000}
-}
+footer{margin-top:110px;padding:26px 0 44px;color:var(--muted);
+font-size:.95rem;border-top:1px solid var(--edge)}
+footer p{max-inline-size:none}
+@media (max-width:640px){.who{flex-direction:column}
+.hero{padding-block:64px 68px}}
