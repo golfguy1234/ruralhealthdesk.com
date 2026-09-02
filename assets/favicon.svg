@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 64 64">
 <rect width="64" height="64" rx="8" fill="#1E3A2A"/>
-<text x="32" y="45" font-family="'Public Sans','Segoe UI',Arial,sans-serif"
-font-weight="800" font-size="40" text-anchor="middle"
-fill="#F7F5EF">R</text>
+<path transform="translate(18.36 45) scale(0.01936 -0.01936)"
+fill="#F7F5EF" d="M148 0V1446H781Q962 1446 1074.0 1387.5Q1186 1329 1238.0 1227.5Q1290 1126 1290 997Q1290 884 1258.0 805.5Q1226 727 1171.5 673.5Q1117 620 1049 583L1310 0H960L737 528H489V0ZM489 785H734Q830 785 888.5 846.0Q947 907 947 991Q947 1079 887.0 1135.0Q827 1191 744 1191H489Z"/>
 <rect x="16" y="51" width="32" height="4" fill="#C9A227"/>
 </svg>
