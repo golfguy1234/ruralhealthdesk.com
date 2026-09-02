@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 64 64">
-<style>
-rect.bg{fill:#FAF7F2} text{fill:#211D19} rect.rule{fill:#8A3B1C}
-@media (prefers-color-scheme:dark){
-rect.bg{fill:#1C1917} text{fill:#EDE7DC}
-rect.rule{fill:#D98B66}}
-</style>
-<rect class="bg" width="64" height="64" rx="6"/>
-<text x="32" y="44" font-family="Georgia,serif" font-weight="bold"
-font-size="40" text-anchor="middle">R</text>
-<rect class="rule" x="14" y="50" width="36" height="4"/>
+<rect width="64" height="64" rx="8" fill="#1E3A2A"/>
+<text x="32" y="45" font-family="'Public Sans','Segoe UI',Arial,sans-serif"
+font-weight="800" font-size="40" text-anchor="middle"
+fill="#F7F5EF">R</text>
+<rect x="16" y="51" width="32" height="4" fill="#C9A227"/>
 </svg>
