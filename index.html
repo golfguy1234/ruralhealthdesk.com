@@ -5,20 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FCFBF7">
-<title>Rural Health Transformation Program, tracked and matched | Rural Health Desk</title>
-<meta name="description" content="CMS Rural Health Transformation Program funding, tracked in all fifty states and matched to the categories of companies behind it.">
+<title>Rural Health Transformation Program awards, matched to what you sell | Rural Health Desk</title>
+<meta name="description" content="Rural Health Atlas tracks the CMS Rural Health Transformation Program in all fifty states. Rural Health Desk is the hands-on service that puts it to work.">
+<meta name="author" content="Justin Brilliant">
 <link rel="canonical" href="https://ruralhealthdesk.com/">
 <meta property="og:site_name" content="Rural Health Desk">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ruralhealthdesk.com/">
-<meta property="og:title" content="Rural Health Transformation Program, tracked and matched | Rural Health Desk">
-<meta property="og:description" content="CMS Rural Health Transformation Program funding, tracked in all fifty states and matched to the categories of companies behind it.">
+<meta property="og:title" content="Rural Health Desk">
+<meta property="og:description" content="Rural Health Atlas tracks the CMS Rural Health Transformation Program in all fifty states. Rural Health Desk is the hands-on service that puts it to work.">
 <meta property="og:image" content="https://ruralhealthdesk.com/assets/og-card.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rural Health Desk: the Rural Health Atlas and the Desk.">
+<meta property="og:image:alt" content="Rural Health Desk: start with the rural organizations already funded for what you sell.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/literata-400.woff2" as="font"
 type="font/woff2" crossorigin>
@@ -28,6 +29,7 @@ type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/assets/manifest.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rural Health Desk","url":"https://ruralhealthdesk.com","email":"justin@ruralhealthdesk.com","telephone":"+18479891727","description":"Rural Health Atlas tracks the CMS Rural Health Transformation Program in all fifty states. Rural Health Desk is the hands-on service that puts it to work.","founder":{"@type":"Person","name":"Justin Brilliant"}}</script>
 <style>
 @font-face{font-family:'Public Sans';font-style:normal;
 font-weight:400 800;font-display:swap;
@@ -41,54 +43,63 @@ line-gap-override:0%}
 src:local('Arial Bold'),local('Arial-BoldMT');
 size-adjust:102.95%;ascent-override:92.28%;descent-override:21.85%;
 line-gap-override:0%}
-:root{--measure:700px;--pagepad:clamp(20px,5vw,40px);
+:root{--measure:680px;--shell:1160px;--pagepad:clamp(20px,5vw,56px);
 --section:clamp(56px,4vw + 40px,96px);
 --sans:'Public Sans','Public Sans Fallback',Arial,sans-serif;
 --paper:#FCFBF7;--ink:#20241F;--muted:#5A6055;
 --field:#1E3A2A;--field-text:#F7F5EF;--field-dim:#C9D3C6;
---wheat:#C9A227;--edge:#E4E2D8}
+--wheat:#C9A227;--edge:#D9D8CF;--mist:#EEF1EB}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
-.btn{transition:none}}
+.btn,.header-cta{transition:none}}
 body{background:var(--paper);color:var(--ink);
 font-family:Literata,'Literata Fallback',Georgia,serif;
-font-size:1.1875rem;line-height:1.55;padding:0 var(--pagepad)}
-h1,h2{font-family:var(--sans);line-height:1.1;text-wrap:balance}
+font-size:1.125rem;line-height:1.58;padding:0 var(--pagepad)}
+h1,h2,h3{font-family:var(--sans);line-height:1.08;text-wrap:balance}
 h1{font-weight:800;letter-spacing:-.015em;
-font-size:clamp(2.1rem, 1.2rem + 3.4vw, 3.4rem)}
-h2{font-weight:700;font-size:clamp(1.45rem, 1.2rem + .9vw, 1.7rem);
-letter-spacing:-.01em;margin-block:var(--section) 20px}
+font-size:clamp(2.45rem, 1.35rem + 4vw, 4.75rem)}
+h2{font-weight:750;font-size:clamp(1.75rem, 1.35rem + 1.6vw, 2.65rem);
+letter-spacing:-.015em}
+h3{font-size:1.22rem;letter-spacing:-.01em}
 p{margin:0 0 1.1em;max-inline-size:var(--measure);text-wrap:pretty}
 p:last-child{margin-bottom:0}
-main>p b,main li b{font-family:var(--sans);font-size:.95em}
-ul{margin:0 0 1.1em;padding-left:24px;max-inline-size:var(--measure)}
-li{margin-bottom:8px}
 a{color:var(--field);text-underline-offset:3px}
 :focus-visible{outline:3px solid var(--field);outline-offset:2px}
-.hero :focus-visible{outline-color:var(--wheat)}
+.hero :focus-visible,.desk-band :focus-visible,.final-cta :focus-visible{
+outline-color:var(--wheat)}
 .btn:focus-visible{outline-color:var(--field-text)}
-main>*{max-inline-size:var(--measure);margin-inline:auto}
-footer{max-inline-size:var(--measure);margin-inline:auto}
-header{padding:22px 0;display:flex;align-items:baseline;
-justify-content:space-between;gap:10px 28px;max-inline-size:var(--measure);
-margin-inline:auto}
+.final-cta :focus-visible,.final-cta .btn:focus-visible{
+outline-color:var(--field)}
+.skip{position:absolute;left:12px;top:-60px;background:var(--wheat);
+color:var(--ink);font-family:var(--sans);font-weight:700;padding:10px 14px;
+z-index:10}
+.skip:focus{top:12px}
+header,footer,.section,.proof-inner,.desk-inner,.final-inner{
+max-inline-size:var(--shell);margin-inline:auto}
+header{padding:18px 0}
+.nav-inner{display:flex;align-items:center;gap:28px}
 .mark{font-family:var(--sans);font-weight:800;font-size:1.05rem;
 color:var(--ink);text-decoration:none;letter-spacing:-.01em}
-header nav a{font-family:var(--sans);font-size:.95rem;
-color:var(--muted);text-decoration:none;margin-left:22px}
-header nav a:first-child{margin-left:0}
-header nav a:hover{color:var(--field)}
-header nav a[aria-current="page"]{color:var(--ink);font-weight:700}
+.nav-inner nav{display:flex;gap:24px;margin-left:auto}
+.nav-inner nav a,.header-cta{font-family:var(--sans);font-size:.86rem;
+font-weight:700;text-decoration:none;color:var(--ink)}
+.nav-inner nav a{padding:8px 0}
+.nav-inner nav a:hover{text-decoration:underline}
+.header-cta{border:1px solid var(--field);padding:9px 14px;border-radius:3px;
+transition:background .15s ease,color .15s ease;min-height:44px;display:inline-flex;
+align-items:center}
+.header-cta:hover{background:var(--field);color:var(--field-text)}
+.header-cta .mobile{display:none}
 .hero{background:var(--field);color:var(--field-text);
 max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
-padding-inline:var(--pagepad);padding-block:88px 92px}
-.hero>div{max-inline-size:var(--measure);margin-inline:auto}
-.hero h1{color:var(--field-text);margin-bottom:26px}
-main>h1.plain{margin-top:64px;margin-bottom:.55em;font-size:1.9rem}
-.hero p{color:var(--field-dim);font-size:1.25rem}
-.hero p.powered{font-size:1.05rem;opacity:.92}
-.hero .go{margin-top:36px;display:flex;align-items:center;
+padding-inline:var(--pagepad);padding-block:clamp(48px,6vw,88px) clamp(56px,7vw,104px)}
+.hero-grid{max-inline-size:var(--shell);margin-inline:auto;display:grid;
+grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);gap:clamp(40px,6vw,88px);
+align-items:center}
+.hero h1{color:var(--field-text);margin-bottom:24px}
+.hero-copy>p{color:var(--field-dim);font-size:clamp(1.08rem,1rem + .4vw,1.3rem)}
+.hero .go{margin-top:30px;display:flex;align-items:center;
 gap:12px 20px;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--wheat);color:var(--ink);
 font-family:var(--sans);font-weight:700;font-size:1.05rem;
@@ -96,95 +107,304 @@ padding:14px 28px;border-radius:4px;text-decoration:none;
 transition:filter .15s ease}
 .btn:hover{filter:brightness(1.12)}
 .hero .go span{color:var(--field-dim);font-size:1.05rem}
-.who{display:flow-root}
-.who img{float:right;width:168px;height:auto;border-radius:6px;
-margin:4px 0 16px 32px}
-.who p+p{clear:right}
-footer{margin-top:var(--section);padding:26px 0 44px;color:var(--muted);
-font-size:.95rem;border-top:1px solid var(--edge)}
+.system-map{border:1px solid rgba(247,245,239,.24);padding:28px;
+background:rgba(0,0,0,.08)}
+.system-label,.eyebrow,.proof-label,.step-no{font-family:var(--sans);
+font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.system-label{color:var(--wheat);margin-bottom:7px}
+.system-name{font-family:var(--sans);font-weight:750;font-size:1.25rem;
+color:var(--field-text);margin-bottom:16px}
+.flow-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.flow-list li{font-family:var(--sans);font-size:.78rem;color:var(--field-dim);
+padding:12px 6px 0;border-top:1px solid rgba(247,245,239,.35)}
+.flow-list li+li{margin-left:12px}
+.system-bridge{height:42px;border-left:1px solid var(--wheat);margin-left:10px}
+.proof{max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
+padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
+.proof-inner{padding-block:25px}
+.proof-label{color:var(--muted);margin-bottom:18px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr)}
+.metrics div{padding:0 24px;border-left:1px solid var(--edge)}
+.metrics div:first-child{padding-left:0;border-left:0}
+.metrics dt{font-family:var(--sans);font-weight:800;font-size:clamp(1.35rem,2vw,2rem);
+line-height:1.1}
+.metrics dd{color:var(--muted);font-size:.86rem;margin-top:7px}
+.section{padding-top:var(--section)}
+.section-head{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1fr);
+gap:clamp(28px,6vw,80px);align-items:start;margin-bottom:40px}
+.eyebrow{color:var(--field);margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:1.08rem}
+.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge)}
+.atlas-card{padding:30px;min-height:230px}
+.atlas-card+.atlas-card{border-left:1px solid var(--edge)}
+.atlas-card .step-no{color:var(--field);margin-bottom:38px}
+.atlas-card h3{margin-bottom:14px}
+.atlas-card p{color:var(--muted);font-size:.98rem}
+.desk-band{background:var(--field);color:var(--field-text);max-inline-size:none;
+margin:var(--section) calc(-1*var(--pagepad)) 0;padding-inline:var(--pagepad)}
+.desk-inner{padding-block:var(--section)}
+.desk-band .eyebrow{color:var(--wheat)}
+.desk-band h2{color:var(--field-text);margin-bottom:22px}
+.desk-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+gap:clamp(40px,7vw,96px);align-items:start}
+.desk-lead{font-size:1.2rem;color:var(--field-dim)}
+.desk-band .desk-copy p+p{color:var(--field-dim);font-size:1.02rem;margin-top:18px}
+.capabilities{list-style:none;padding:0;border-top:1px solid rgba(247,245,239,.24)}
+.capabilities li{font-family:var(--sans);font-weight:650;padding:18px 0;
+border-bottom:1px solid rgba(247,245,239,.24);display:grid;
+grid-template-columns:32px 1fr;gap:12px}
+.capabilities span{color:var(--wheat);font-size:.78rem;padding-top:3px}
+.process{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);
+counter-reset:process;border-top:1px solid var(--edge)}
+.process li{counter-increment:process;padding:28px 30px 0 0;position:relative}
+.process li:before{content:'0' counter(process);display:block;font-family:var(--sans);
+font-weight:800;color:var(--field);font-size:.76rem;letter-spacing:.08em;
+margin-bottom:34px}
+.process li+li{padding-left:30px;border-left:1px solid var(--edge)}
+.process h3{margin-bottom:12px}
+.process p{font-size:.96rem;color:var(--muted)}
+.founder{display:grid;grid-template-columns:280px minmax(0,1fr);gap:clamp(36px,7vw,86px);
+align-items:start}
+.founder img{width:100%;height:auto;border-radius:4px;display:block}
+.founder h2{margin-bottom:24px}
+.final-cta{background:var(--mist);max-inline-size:none;
+margin:var(--section) calc(-1*var(--pagepad)) 0;padding-inline:var(--pagepad)}
+.final-inner{padding-block:var(--section);display:grid;
+grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.final-inner h2{font-size:clamp(2.2rem,1.4rem + 3vw,4rem);margin-bottom:20px}
+.contact-lines{font-family:var(--sans);font-weight:700;display:flex;gap:12px 24px;
+flex-wrap:wrap;margin-top:24px;font-style:normal}
+.contact-lines a{text-decoration-thickness:1px}
+.final-action{text-align:right}
+.final-action .btn{white-space:nowrap}
+.final-action p{font-size:.92rem;color:var(--muted);margin:10px 0 0}
+main>h1.plain{max-inline-size:var(--measure);margin:64px auto 0;font-size:1.9rem}
+main>h1.plain+p{margin:20px auto 0}
+footer{padding:28px 0 42px;color:var(--muted);
+font-size:.88rem;border-top:1px solid var(--edge)}
 footer p{max-inline-size:none}
-@media (max-width:640px){
-header{flex-direction:column;align-items:flex-start;gap:10px 0}
-header nav a{margin-left:0;margin-right:18px}
-.hero{padding-block:48px 56px}
-.hero h1{margin-bottom:20px}
-.hero p{font-size:1.125rem}
-.hero p.powered{font-size:1rem}
-.hero .go{margin-top:28px}
-.who img{float:none;display:block;width:140px;margin:0 0 24px}
-body{font-size:1.0625rem}}
+@media (max-width:900px){
+.hero-grid,.section-head,.desk-grid,.final-inner{grid-template-columns:1fr}
+.hero-grid{gap:42px}.system-map{max-width:620px}
+.metrics{grid-template-columns:repeat(2,1fr);row-gap:22px}
+.metrics div:nth-child(3){padding-left:0;border-left:0}
+.atlas-grid{grid-template-columns:1fr}.atlas-card{min-height:0}
+.atlas-card+.atlas-card{border-left:0;border-top:1px solid var(--edge)}
+.process{grid-template-columns:1fr}.process li{padding:24px 0}
+.process li:before{margin-bottom:16px}.process li+li{padding-left:0;border-left:0;
+border-top:1px solid var(--edge)}
+.final-action{text-align:left}}
+@media (max-width:700px){
+body{font-size:1.03rem}.nav-inner nav{display:none}.header-cta{margin-left:auto}
+.header-cta .wide{display:none}.header-cta .mobile{display:inline}
+.hero{padding-block:48px 54px}.hero h1{margin-bottom:20px}
+.hero .go{margin-top:26px}.hero-grid{gap:32px}
+.system-map{padding:22px}.proof-inner{padding-block:22px}
+.metrics div{padding:0 16px}.metrics dt{font-size:1.3rem}
+.section-head{margin-bottom:28px}.atlas-card{padding:24px}
+.atlas-card .step-no{margin-bottom:24px}
+.founder{grid-template-columns:1fr}.founder img{width:180px}
+.final-inner{gap:28px}.final-action .btn{width:100%;text-align:center}
+.contact-lines{display:grid;gap:0}.contact-lines a{min-height:44px;display:flex;
+align-items:center}.flow-list li{font-size:.7rem}}
+@media print{header,.go,.header-cta,.final-action{display:none!important}
+body{background:#fff;color:#000;padding:0}.hero,.desk-band,.final-cta,.proof{
+margin-inline:0;padding-inline:0;background:#fff;color:#000}
+.hero h1,.desk-band h2,.system-name{color:#000}
+.hero p,.desk-lead,.desk-band .desk-copy p+p,.system-label,
+.desk-band .eyebrow,.capabilities span,.flow-list li{color:#333}
+.section,.desk-inner,.final-inner{padding-top:32px}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <header>
+<div class="nav-inner">
 <a class="mark" href="/" aria-current="page">Rural Health Desk</a>
-<nav>
-<a href="/atlas/">The Atlas</a>
-<a href="/desk/">The Desk</a>
-<a href="/about/">About</a>
+<nav aria-label="Primary">
+<a href="/#atlas">The Atlas</a>
+<a href="/#desk">The Desk</a>
+<a href="/#about">About</a>
 </nav>
+<a class="header-cta" href="mailto:justin@ruralhealthdesk.com?subject=Where%20my%20company%20fits%20in%20the%20Rural%20Health%20Transformation%20Program"><span class="wide">Tell me what you sell</span><span class="mobile">Email Justin</span></a>
+</div>
 </header>
-<main>
-<div class="hero"><div>
-<h1>Connecting healthcare companies to funded rural health opportunities.</h1>
-<p class="powered">Powered by Rural Health Atlas, a proprietary database of rural health funding, award recipients, initiatives, organizations, and vendor opportunities across all fifty states.</p>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><div class="hero-grid">
+<div class="hero-copy">
+<h1 id="hero-title">Start with the rural organizations already funded
+for what you sell.</h1>
+<p>Rural Health Atlas tracks the CMS Rural Health Transformation Program
+in all fifty states. It records the funded awards, their recipients,
+their source documents and the vendor fit.</p>
+<p>Rural Health Desk is the hands-on service I run on that intelligence,
+for companies selling into the program and for organizations pursuing
+it.</p>
 <div class="go">
-<a class="btn" href="mailto:justin@ruralhealthdesk.com?subject=Rural%20health%20funding">Email Justin</a>
+<a class="btn" href="mailto:justin@ruralhealthdesk.com?subject=Where%20my%20company%20fits%20in%20the%20Rural%20Health%20Transformation%20Program">Tell me what you sell</a>
 <span>I answer the same day.</span>
 </div>
-</div></div>
-
-<h2>How it works</h2>
-
-<p><b>The awards.</b> The CMS Rural Health Transformation Program is
-putting fifty billion dollars into rural health over five years, and the
-money flows through the states. Every state runs its own program,
-publishes its own documents, and announces its own winners on its own
-schedule. The Rural Health Atlas reads those documents and records who
-won, what the award pays for, and the amount when the state publishes
-one.</p>
-
-<p><b>The organizations.</b> The Atlas covers more than 30,000
-healthcare organizations and sites across all fifty states, from
-critical access hospitals and rural health clinics to EMS agencies,
-public health departments and tribal health entities. The classes come from the states' own eligibility words.</p>
-
-<p><b>The vendors.</b> The Atlas also tracks close to 1,000 healthcare
-companies selling into rural health. It reads the scope of the published awards and matches them to the categories of companies that sell what the award is meant to buy. The result is a ranked set of funded organizations whose awards relate to what you sell, with the published award behind every match.</p>
-
-<p><a href="/atlas/">How the Atlas is built</a></p>
-
-<h2>The white-glove Desk</h2>
-
-<p>The Atlas tells me where the opportunities are, and the Rural Health
-Desk is how I help you pursue them. I run the whole process white-glove. I read every state's rules, deadlines, scoring, and how award money can reach vendors. I research the winners and likely applicants, run the outreach for them, and write the grant applications, including one rural health organization's entire application in under 24 hours.</p>
-
-<p><a href="/desk/">What the Desk does</a></p>
-
-<h2>Who I am</h2>
-
-<div class="who"><img src="/assets/justin-small.jpg" srcset="/assets/justin-small.jpg 440w, /assets/justin.jpg 880w" sizes="(max-width:640px) 140px, 168px" alt="Justin Brilliant, outdoors, smiling" width="440" height="449" loading="lazy" decoding="async">
-<p>I am Justin Brilliant, and I run the Rural Health Desk. I started working on the Rural
-Health Transformation Program while helping a dermatology health-tech
-company figure out where it fit, and the answer turned out to be buried
-in hundreds of separate state documents. So I built the Atlas, and I now
-work both sides of the program, with companies selling into it and with
-rural health organizations pursuing the funding themselves.</p>
-<p><a href="/about/">More about me</a></p>
 </div>
+<aside class="system-map" aria-label="How Rural Health Atlas powers Rural Health Desk">
+<div>
+<p class="system-label">Intelligence layer</p>
+<p class="system-name">Rural Health Atlas</p>
+<ol class="flow-list"><li>Awards</li><li>Organizations</li><li>Vendor fit</li></ol>
+</div>
+<div class="system-bridge" aria-hidden="true"></div>
+<div>
+<p class="system-label">Hands-on service</p>
+<p class="system-name">Rural Health Desk</p>
+<ol class="flow-list"><li>Interpret</li><li>Prioritize</li><li>Pursue</li></ol>
+</div>
+</aside>
+</div></section>
 
-<h2>Write to me</h2>
+<section class="proof" aria-label="Current Rural Health Atlas coverage">
+<div class="proof-inner">
+<p class="proof-label">Current Atlas coverage. Last updated September 3, 2026</p>
+<dl class="metrics">
+<div><dt>50</dt><dd>states tracked</dd></div>
+<div><dt>31,000+</dt><dd>healthcare organizations and sites</dd></div>
+<div><dt>Nearly 1,000</dt><dd>healthcare vendors</dd></div>
+<div><dt>Roughly 1,000</dt><dd>funded awards, in 22 states so far</dd></div>
+</dl>
+</div></section>
 
-<p>Tell me what you sell, or what you are applying to build, and I will
-show you where it sits in the Rural Health Transformation Program. For a
-healthcare company that means the funded organizations whose awards match
-your product, with the state material behind each one. For a rural health organization, it means a straight answer on the fit and help drafting the application.</p>
+<section class="section" aria-labelledby="problem-title">
+<div class="section-head">
+<div><p class="eyebrow">The problem</p>
+<h2 id="problem-title">Fifty states. Fifty different programs.</h2></div>
+<div><p><a href="https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm">Public Law 119-21, Section 71401</a>,
+appropriates $10 billion a year for five fiscal years, a $50 billion
+total, and the money flows through the states. Every state runs its own
+program, publishes its own documents, and announces its own winners on
+its own schedule.</p>
+<p>The information exists, but it is scattered across plans, PDFs,
+spreadsheets and procurement pages. The Atlas brings it into one
+national view, so the search begins with organizations already funded
+for the problem your company solves.</p></div>
+</div>
+</section>
 
-<p>Email <a href="mailto:justin@ruralhealthdesk.com?subject=Rural%20health%20funding">justin@ruralhealthdesk.com</a> or call <a href="tel:+18479891727">(847) 989-1727</a>.</p>
+<section class="section" id="atlas" aria-labelledby="atlas-title">
+<div class="section-head">
+<div><p class="eyebrow">Rural Health Atlas</p>
+<h2 id="atlas-title">The intelligence behind the work.</h2></div>
+<p>The Atlas turns public state documents into a connected view of
+awards, recipients and vendor fit. It shows where a company belongs
+without publishing the proprietary registry or its rankings.</p>
+</div>
+<div class="atlas-grid">
+<article class="atlas-card"><p class="step-no">01 / Awards</p>
+<h3>Read from the source.</h3>
+<p>I read the published funded awards and keep the source document
+behind each one. Every funded award in the Atlas names its recipient
+and cites the document it was read from, with the amount when the
+state discloses one.</p></article>
+<article class="atlas-card"><p class="step-no">02 / Organizations</p>
+<h3>Connected to the recipient.</h3>
+<p>The Atlas connects published recipients to a national database of
+more than 31,000 healthcare organizations
+and sites, from critical access hospitals and rural health clinics to
+EMS agencies, public health departments and tribal health entities.</p></article>
+<article class="atlas-card"><p class="step-no">03 / Vendor fit</p>
+<h3>Ranked against what you sell.</h3>
+<p>I use the scope of the funded awards to rank the fit between what you
+sell and the organizations already funded for related work, with the
+published award behind every match. The Atlas tracks close to 1,000
+companies selling into rural health, in areas including workforce,
+behavioral health, EHR and health IT, remote patient monitoring,
+telehealth, care coordination, analytics, imaging and diagnostics, and
+EMS.</p></article>
+</div>
+</section>
 
+<section class="desk-band" id="desk" aria-labelledby="desk-title">
+<div class="desk-inner"><div class="desk-grid">
+<div class="desk-copy"><p class="eyebrow">Rural Health Desk</p>
+<h2 id="desk-title">The Atlas finds the fit. I do the work.</h2>
+<p class="desk-lead">Tell me what you sell. I determine where it fits,
+who has money for it, how that money can reach you and what needs to
+happen next.</p>
+<p>I run the whole process white-glove. I read every state's rules,
+deadlines, scoring, and how award money can reach vendors. I research
+the winners and likely applicants and run the outreach for you. I then
+write the grant applications themselves, including one rural health
+organization's entire application in under 24 hours.</p></div>
+<ul class="capabilities">
+<li><span>01</span>Find the funded awards and the coming programs that
+match what you sell.</li>
+<li><span>02</span>Rank the funded organizations by how closely their
+awards fit your product, and the likely applicants by the programs they
+are pursuing.</li>
+<li><span>03</span>Research the decision makers and write outreach built
+on the exact award each organization received or is pursuing. There is
+no cold outreach.</li>
+<li><span>04</span>Support grant strategy and write the applications for
+organizations pursuing the funding, and say up front if one cannot be
+finished well.</li>
+</ul>
+</div></div>
+</section>
+
+<section class="section" aria-labelledby="process-title">
+<div class="section-head">
+<div><p class="eyebrow">How we work together</p>
+<h2 id="process-title">One focused path from product to opportunity.</h2></div>
+<p>This is not a login and a spreadsheet. The Atlas is my research
+infrastructure. The Desk is the work I do with it.</p>
+</div>
+<ol class="process">
+<li><h3>Tell me what you sell.</h3>
+<p>Give me the product, the customer and the problem you solve.</p></li>
+<li><h3>I find where it fits.</h3>
+<p>I verify the source material and identify the strongest funded and
+upcoming opportunities.</p></li>
+<li><h3>We pursue the right path.</h3>
+<p>I turn the research into a focused plan, specific outreach and the
+next action required.</p></li>
+</ol>
+</section>
+
+<section class="section founder" id="about" aria-labelledby="about-title">
+<img src="/assets/justin-small.jpg"
+srcset="/assets/justin-small.jpg 440w, /assets/justin.jpg 880w"
+sizes="(max-width:700px) 180px, 280px"
+alt="Justin Brilliant, outdoors, smiling" width="440" height="449"
+loading="lazy" decoding="async">
+<div><p class="eyebrow">Why I built it</p>
+<h2 id="about-title">The question was simple. The answer was scattered.</h2>
+<p>I am Justin Brilliant. I built Rural Health Atlas while helping a dermatology
+health-tech company answer a basic question: which rural organizations
+had funding that could pay for its technology?</p>
+<p>The answer was spread across hundreds of state plans, award documents,
+spreadsheets and procurement pages. So I built the system I needed, one
+state program at a time, and it now covers all fifty states. Building
+and maintaining it is my full-time work.</p>
+<p>Rural Health Desk is how I put that system to work: for companies
+selling into the program, and for rural health organizations pursuing
+the funding themselves.</p></div>
+</section>
+
+<section class="final-cta" aria-labelledby="contact-title">
+<div class="final-inner"><div>
+<p class="eyebrow">Start with the fit</p>
+<h2 id="contact-title">Tell me what you sell.</h2>
+<p>Or tell me what your rural health organization is applying to build.
+I will show you where it sits in CMS RHTP and what needs to happen next.</p>
+<address class="contact-lines">
+<a href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>
+<a href="tel:+18479891727">(847) 989-1727</a>
+</address>
+</div>
+<div class="final-action"><a class="btn" href="mailto:justin@ruralhealthdesk.com?subject=Where%20my%20company%20fits%20in%20the%20Rural%20Health%20Transformation%20Program">Email Justin</a>
+<p>I answer the same day.</p></div>
+</div></section>
 </main>
 <footer>
-<p>I run the Rural Health Desk.</p>
+<p><b>Rural Health Desk</b>: hands-on business development and grant strategy,
+powered by Rural Health Atlas. &copy; 2026 Justin Brilliant.</p>
 </footer>
 </body>
 </html>
