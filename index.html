@@ -6,19 +6,19 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FCFBF7">
 <title>Rural Health Transformation Program, tracked and matched | Rural Health Desk</title>
-<meta name="description" content="CMS Rural Health Transformation Program, tracked in all fifty states: awards matched to the organizations behind them and the vendors who sell what they fund.">
+<meta name="description" content="CMS Rural Health Transformation Program funding, tracked in all fifty states and matched to the categories of companies behind it.">
 <link rel="canonical" href="https://ruralhealthdesk.com/">
 <meta property="og:site_name" content="Rural Health Desk">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ruralhealthdesk.com/">
-<meta property="og:title" content="Rural Health Desk">
-<meta property="og:description" content="CMS Rural Health Transformation Program, tracked in all fifty states: awards matched to the organizations behind them and the vendors who sell what they fund.">
+<meta property="og:title" content="Rural Health Transformation Program, tracked and matched | Rural Health Desk">
+<meta property="og:description" content="CMS Rural Health Transformation Program funding, tracked in all fifty states and matched to the categories of companies behind it.">
 <meta property="og:image" content="https://ruralhealthdesk.com/assets/og-card.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rural Health Desk: the entire rural health transformation program, tracked and matched.">
+<meta property="og:image:alt" content="Rural Health Desk: the Rural Health Atlas and the Desk.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/literata-400.woff2" as="font"
 type="font/woff2" crossorigin>
@@ -61,23 +61,33 @@ h2{font-weight:700;font-size:clamp(1.45rem, 1.2rem + .9vw, 1.7rem);
 letter-spacing:-.01em;margin-block:var(--section) 20px}
 p{margin:0 0 1.1em;max-inline-size:var(--measure);text-wrap:pretty}
 p:last-child{margin-bottom:0}
-main>p b{font-family:var(--sans);font-size:.95em}
+main>p b,main li b{font-family:var(--sans);font-size:.95em}
+ul{margin:0 0 1.1em;padding-left:24px;max-inline-size:var(--measure)}
+li{margin-bottom:8px}
 a{color:var(--field);text-underline-offset:3px}
 :focus-visible{outline:3px solid var(--field);outline-offset:2px}
 .hero :focus-visible{outline-color:var(--wheat)}
 .btn:focus-visible{outline-color:var(--field-text)}
 main>*{max-inline-size:var(--measure);margin-inline:auto}
-header,footer{max-inline-size:var(--measure);margin-inline:auto}
-header{padding:22px 0}
+footer{max-inline-size:var(--measure);margin-inline:auto}
+header{padding:22px 0;display:flex;align-items:baseline;
+justify-content:space-between;gap:10px 28px;max-inline-size:var(--measure);
+margin-inline:auto}
 .mark{font-family:var(--sans);font-weight:800;font-size:1.05rem;
 color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+header nav a{font-family:var(--sans);font-size:.95rem;
+color:var(--muted);text-decoration:none;margin-left:22px}
+header nav a:first-child{margin-left:0}
+header nav a:hover{color:var(--field)}
+header nav a[aria-current="page"]{color:var(--ink);font-weight:700}
 .hero{background:var(--field);color:var(--field-text);
 max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
 padding-inline:var(--pagepad);padding-block:88px 92px}
 .hero>div{max-inline-size:var(--measure);margin-inline:auto}
 .hero h1{color:var(--field-text);margin-bottom:26px}
-main>h1.plain{margin-top:64px;font-size:1.9rem}
+main>h1.plain{margin-top:64px;margin-bottom:.55em;font-size:1.9rem}
 .hero p{color:var(--field-dim);font-size:1.25rem}
+.hero p.powered{font-size:1.05rem;opacity:.92}
 .hero .go{margin-top:36px;display:flex;align-items:center;
 gap:12px 20px;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--wheat);color:var(--ink);
@@ -94,9 +104,12 @@ footer{margin-top:var(--section);padding:26px 0 44px;color:var(--muted);
 font-size:.95rem;border-top:1px solid var(--edge)}
 footer p{max-inline-size:none}
 @media (max-width:640px){
+header{flex-direction:column;align-items:flex-start;gap:10px 0}
+header nav a{margin-left:0;margin-right:18px}
 .hero{padding-block:48px 56px}
 .hero h1{margin-bottom:20px}
 .hero p{font-size:1.125rem}
+.hero p.powered{font-size:1rem}
 .hero .go{margin-top:28px}
 .who img{float:none;display:block;width:140px;margin:0 0 24px}
 body{font-size:1.0625rem}}
@@ -105,58 +118,70 @@ body{font-size:1.0625rem}}
 <body>
 <header>
 <a class="mark" href="/" aria-current="page">Rural Health Desk</a>
+<nav>
+<a href="/atlas/">The Atlas</a>
+<a href="/desk/">The Desk</a>
+<a href="/about/">About</a>
+</nav>
 </header>
 <main>
 <div class="hero"><div>
-<h1>The entire rural health transformation program, tracked and
-matched.</h1>
-<p>I track the CMS Rural Health Transformation Program in all fifty
-states, every day, and match the awards to the organizations behind
-them and to the vendors who sell what they fund.</p>
+<h1>Connecting healthcare companies to funded rural health opportunities.</h1>
+<p class="powered">Powered by Rural Health Atlas, a proprietary database of rural health funding, award recipients, initiatives, organizations, and vendor opportunities across all fifty states.</p>
 <div class="go">
 <a class="btn" href="mailto:justin@ruralhealthdesk.com?subject=Rural%20health%20funding">Email Justin</a>
 <span>I answer the same day.</span>
 </div>
 </div></div>
 
-<h2>How the Desk works</h2>
-<p>The Desk is three databases, and I keep them linked.</p>
-<p><b>The awards.</b> The funded awards the states publish, read from
-the documents that publish them. The fastest-moving state pages are
-checked every hour, the rest once a day.</p>
-<p><b>The organizations.</b> A national database of rural health
-organizations, covering critical access hospitals, rural hospitals,
-rural health clinics, federally qualified health centers, EMS agencies,
-public health agencies, community mental health centers, certified
-community behavioral health clinics, and tribal providers. The
-awards are linked to the organizations behind them.</p>
-<p><b>The vendors.</b> A database of the companies that sell into
-rural health, by category, mapped against what the awards fund. For
-a vendor, that shows which funded projects sit nearest to what it
-sells, in which states, and who was funded.</p>
+<h2>How it works</h2>
+
+<p><b>The awards.</b> The CMS Rural Health Transformation Program is
+putting fifty billion dollars into rural health over five years, and the
+money flows through the states. Every state runs its own program,
+publishes its own documents, and announces its own winners on its own
+schedule. The Rural Health Atlas reads those documents and records who
+won, what the award pays for, and the amount when the state publishes
+one.</p>
+
+<p><b>The organizations.</b> The Atlas covers more than 30,000
+healthcare organizations and sites across all fifty states, from
+critical access hospitals and rural health clinics to EMS agencies,
+public health departments and tribal health entities. The classes come from the states' own eligibility words.</p>
+
+<p><b>The vendors.</b> The Atlas also tracks close to 1,000 healthcare
+companies selling into rural health. It reads the scope of the published awards and matches them to the categories of companies that sell what the award is meant to buy. The result is a ranked set of funded organizations whose awards relate to what you sell, with the published award behind every match.</p>
+
+<p><a href="/atlas/">How the Atlas is built</a></p>
+
+<h2>The white-glove Desk</h2>
+
+<p>The Atlas tells me where the opportunities are, and the Rural Health
+Desk is how I help you pursue them. I run the whole process white-glove. I read every state's rules, deadlines, scoring, and how award money can reach vendors. I research the winners and likely applicants, run the outreach for them, and write the grant applications, including one rural health organization's entire application in under 24 hours.</p>
+
+<p><a href="/desk/">What the Desk does</a></p>
 
 <h2>Who I am</h2>
-<div class="who">
-<img src="/assets/justin-small.jpg"
-srcset="/assets/justin-small.jpg 440w, /assets/justin.jpg 880w"
-sizes="(max-width:640px) 140px, 168px"
-alt="Justin Brilliant, outdoors, smiling" width="440" height="449"
-loading="lazy" decoding="async">
-<p>I am Justin Brilliant. I built the registry this summer while helping a
-health-tech company through the program, when nobody could say where
-the money was going. That registry became the Rural Health Desk, and
-keeping it is now my full-time work.</p>
-<p>I track one program: the CMS Rural Health Transformation Program.
-I do not track all federal funding, and I do not track all rural
-health money. That narrowness is what makes the registry
-checkable.</p>
+
+<div class="who"><img src="/assets/justin-small.jpg" srcset="/assets/justin-small.jpg 440w, /assets/justin.jpg 880w" sizes="(max-width:640px) 140px, 168px" alt="Justin Brilliant, outdoors, smiling" width="440" height="449" loading="lazy" decoding="async">
+<p>I am Justin Brilliant, and I run the Rural Health Desk. I started working on the Rural
+Health Transformation Program while helping a dermatology health-tech
+company figure out where it fit, and the answer turned out to be buried
+in hundreds of separate state documents. So I built the Atlas, and I now
+work both sides of the program, with companies selling into it and with
+rural health organizations pursuing the funding themselves.</p>
+<p><a href="/about/">More about me</a></p>
 </div>
 
 <h2>Write to me</h2>
-<p>Tell me what you sell, or what you have been funded to build, and I
-will show you where it sits in the program. Email
-<a href="mailto:justin@ruralhealthdesk.com?subject=Rural%20health%20funding">justin@ruralhealthdesk.com</a> or call
-<a href="tel:+18479891727">(847) 989-1727</a>.</p>
+
+<p>Tell me what you sell, or what you are applying to build, and I will
+show you where it sits in the Rural Health Transformation Program. For a
+healthcare company that means the funded organizations whose awards match
+your product, with the state material behind each one. For a rural health organization, it means a straight answer on the fit and help drafting the application.</p>
+
+<p>Email <a href="mailto:justin@ruralhealthdesk.com?subject=Rural%20health%20funding">justin@ruralhealthdesk.com</a> or call <a href="tel:+18479891727">(847) 989-1727</a>.</p>
+
 </main>
 <footer>
 <p>I run the Rural Health Desk.</p>
