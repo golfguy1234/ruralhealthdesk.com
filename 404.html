@@ -19,7 +19,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rural Health Desk: start with the rural organizations already funded for what you sell.">
+<meta property="og:image:alt" content="Rural Health Desk: I know which rural organizations already have money for what you sell.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/literata-400.woff2" as="font"
 type="font/woff2" crossorigin>
@@ -51,6 +51,7 @@ line-gap-override:0%}
 --wheat:#C9A227;--edge:#D9D8CF;--mist:#EEF1EB}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;overflow-x:clip}
+[id]{scroll-margin-top:18px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 .btn,.header-cta{transition:none}}
 body{background:var(--paper);color:var(--ink);
@@ -78,7 +79,7 @@ z-index:10}
 header,footer,.section,.proof-inner,.desk-inner,.final-inner{
 max-inline-size:var(--shell);margin-inline:auto}
 header{padding:18px 0}
-.nav-inner{display:flex;align-items:center;gap:28px}
+.nav-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .mark{font-family:var(--sans);font-weight:800;font-size:1.05rem;
 color:var(--ink);text-decoration:none;letter-spacing:-.01em}
 .nav-inner nav{display:flex;gap:24px;margin-left:auto}
@@ -118,7 +119,6 @@ color:var(--field-text);margin-bottom:16px}
 .flow-list li{font-family:var(--sans);font-size:.78rem;color:var(--field-dim);
 padding:12px 6px 0;border-top:1px solid rgba(247,245,239,.35)}
 .flow-list li+li{margin-left:12px}
-.system-bridge{height:42px;border-left:1px solid var(--wheat);margin-left:10px}
 .proof{max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
 padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
 .proof-inner{padding-block:25px}
@@ -133,7 +133,7 @@ line-height:1.1}
 .section-head{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1fr);
 gap:clamp(28px,6vw,80px);align-items:start;margin-bottom:40px}
 .eyebrow{color:var(--field);margin-bottom:12px}
-.section-head p{color:var(--muted);font-size:1.08rem}
+.section-head p:not(.eyebrow){color:var(--muted);font-size:1.08rem}
 .atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge)}
 .atlas-card{padding:30px;min-height:230px}
 .atlas-card+.atlas-card{border-left:1px solid var(--edge)}
@@ -151,20 +151,13 @@ margin:var(--section) calc(-1*var(--pagepad)) 0;padding-inline:var(--pagepad)}
 gap:clamp(40px,7vw,96px);align-items:start}
 .desk-lead{font-size:1.2rem;color:var(--field-dim)}
 .desk-band .desk-copy p+p{color:var(--field-dim);font-size:1.02rem;margin-top:18px}
+.cap-lead{font-family:var(--sans);font-weight:750;font-size:.95rem;
+color:var(--wheat);margin-bottom:16px}
 .capabilities{list-style:none;padding:0;border-top:1px solid rgba(247,245,239,.24)}
 .capabilities li{font-family:var(--sans);font-weight:650;padding:18px 0;
 border-bottom:1px solid rgba(247,245,239,.24);display:grid;
 grid-template-columns:32px 1fr;gap:12px}
 .capabilities span{color:var(--wheat);font-size:.78rem;padding-top:3px}
-.process{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);
-counter-reset:process;border-top:1px solid var(--edge)}
-.process li{counter-increment:process;padding:28px 30px 0 0;position:relative}
-.process li:before{content:'0' counter(process);display:block;font-family:var(--sans);
-font-weight:800;color:var(--field);font-size:.76rem;letter-spacing:.08em;
-margin-bottom:34px}
-.process li+li{padding-left:30px;border-left:1px solid var(--edge)}
-.process h3{margin-bottom:12px}
-.process p{font-size:.96rem;color:var(--muted)}
 .founder{display:grid;grid-template-columns:280px minmax(0,1fr);gap:clamp(36px,7vw,86px);
 align-items:start}
 .founder img{width:100%;height:auto;border-radius:4px;display:block}
@@ -192,12 +185,14 @@ footer p{max-inline-size:none}
 .metrics div:nth-child(3){padding-left:0;border-left:0}
 .atlas-grid{grid-template-columns:1fr}.atlas-card{min-height:0}
 .atlas-card+.atlas-card{border-left:0;border-top:1px solid var(--edge)}
-.process{grid-template-columns:1fr}.process li{padding:24px 0}
-.process li:before{margin-bottom:16px}.process li+li{padding-left:0;border-left:0;
-border-top:1px solid var(--edge)}
 .final-action{text-align:left}}
 @media (max-width:700px){
-body{font-size:1.03rem}.nav-inner nav{display:none}.header-cta{margin-left:auto}
+body{font-size:1.03rem}
+.nav-inner{gap:10px 18px}.mark{margin-right:auto}.header-cta{margin-left:0}
+.nav-inner nav{order:3;flex-basis:100%;margin-left:0;gap:20px;
+border-top:1px solid var(--edge);padding-top:2px}
+.nav-inner nav a{padding:11px 0;min-height:44px;display:inline-flex;
+align-items:center}
 .header-cta .wide{display:none}.header-cta .mobile{display:inline}
 .hero{padding-block:48px 54px}.hero h1{margin-bottom:20px}
 .hero .go{margin-top:26px}.hero-grid{gap:32px}
@@ -209,6 +204,8 @@ body{font-size:1.03rem}.nav-inner nav{display:none}.header-cta{margin-left:auto}
 .final-inner{gap:28px}.final-action .btn{width:100%;text-align:center}
 .contact-lines{display:grid;gap:0}.contact-lines a{min-height:44px;display:flex;
 align-items:center}.flow-list li{font-size:.7rem}}
+@media (max-width:400px){.mark{font-size:.97rem}
+.header-cta{padding:9px 11px;font-size:.8rem}}
 @media print{header,.go,.header-cta,.final-action{display:none!important}
 body{background:#fff;color:#000;padding:0}.hero,.desk-band,.final-cta,.proof{
 margin-inline:0;padding-inline:0;background:#fff;color:#000}
@@ -228,18 +225,17 @@ margin-inline:0;padding-inline:0;background:#fff;color:#000}
 <a href="/#desk">The Desk</a>
 <a href="/#about">About</a>
 </nav>
-<a class="header-cta" href="mailto:justin@ruralhealthdesk.com?subject=Where%20my%20company%20fits%20in%20the%20Rural%20Health%20Transformation%20Program"><span class="wide">Tell me what you sell</span><span class="mobile">Email Justin</span></a>
+<a class="header-cta" href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program"><span class="wide">Tell me what you sell</span><span class="mobile">Email Justin</span></a>
 </div>
 </header>
 <main id="main">
 <h1 class="plain">That page is not here</h1>
 <p>The site is one page. Everything lives at
 <a href="/">ruralhealthdesk.com</a>, and I am at
-<a href="mailto:justin@ruralhealthdesk.com?subject=Where%20my%20company%20fits%20in%20the%20Rural%20Health%20Transformation%20Program">justin@ruralhealthdesk.com</a>.</p>
+<a href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program">justin@ruralhealthdesk.com</a>.</p>
 </main>
 <footer>
-<p><b>Rural Health Desk</b>: hands-on business development and grant strategy,
-powered by Rural Health Atlas. &copy; 2026 Justin Brilliant.</p>
+<p>Rural Health Desk. &copy; 2026 Justin Brilliant.</p>
 </footer>
 </body>
 </html>
