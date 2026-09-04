@@ -110,15 +110,16 @@ transition:filter .15s ease}
 .hero .go span{color:var(--field-dim);font-size:1.05rem}
 .system-map{border:1px solid rgba(247,245,239,.24);padding:28px;
 background:rgba(0,0,0,.08)}
+.system-map>div+div{margin-top:30px}
 .system-label,.eyebrow,.proof-label,.step-no{font-family:var(--sans);
 font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .system-label{color:var(--wheat);margin-bottom:7px}
 .system-name{font-family:var(--sans);font-weight:750;font-size:1.25rem;
 color:var(--field-text);margin-bottom:16px}
-.flow-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.flow-list{list-style:none;padding:0;display:grid;
+grid-template-columns:repeat(3,1fr);column-gap:12px}
 .flow-list li{font-family:var(--sans);font-size:.78rem;color:var(--field-dim);
 padding:12px 6px 0;border-top:1px solid rgba(247,245,239,.35)}
-.flow-list li+li{margin-left:12px}
 .proof{max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
 padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
 .proof-inner{padding-block:25px}
@@ -130,18 +131,23 @@ padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
 line-height:1.1}
 .metrics dd{color:var(--muted);font-size:.86rem;margin-top:7px}
 .section{padding-top:var(--section)}
+#about{padding-top:calc(var(--section) + 32px)}
 .section-head{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1fr);
 gap:clamp(28px,6vw,80px);align-items:start;margin-bottom:40px}
 .eyebrow{color:var(--field);margin-bottom:12px}
 .section-head p:not(.eyebrow){color:var(--muted);font-size:1.08rem}
-.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge)}
-.atlas-card{padding:30px;min-height:230px}
-.atlas-card+.atlas-card{border-left:1px solid var(--edge)}
+.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+background:var(--edge);border:1px solid var(--edge)}
+.atlas-card{padding:30px;min-height:230px;background:var(--paper)}
 .atlas-card .step-no{color:var(--field);margin-bottom:38px}
 .atlas-card h3{margin-bottom:14px}
 .atlas-card p{color:var(--muted);font-size:.98rem}
-.example{margin-top:28px;font-size:1rem;color:var(--muted)}
-.example b{font-family:var(--sans);font-size:.92em;color:var(--ink)}
+.example{margin-top:28px;border:1px solid var(--edge);background:var(--mist);
+padding:26px 30px;font-size:1.02rem;color:var(--ink)}
+.example .amount{font-family:var(--sans);font-weight:800}
+.example blockquote{margin:14px 0;padding-left:18px;color:var(--muted);
+border-left:2px solid var(--wheat);font-size:.98rem}
+.example .src{font-family:var(--sans);font-size:.82rem;margin-top:14px}
 .desk-band{background:var(--field);color:var(--field-text);max-inline-size:none;
 margin:var(--section) calc(-1*var(--pagepad)) 0;padding-inline:var(--pagepad)}
 .desk-inner{padding-block:var(--section)}
@@ -184,7 +190,6 @@ footer p{max-inline-size:none}
 .metrics{grid-template-columns:repeat(2,1fr);row-gap:22px}
 .metrics div:nth-child(3){padding-left:0;border-left:0}
 .atlas-grid{grid-template-columns:1fr}.atlas-card{min-height:0}
-.atlas-card+.atlas-card{border-left:0;border-top:1px solid var(--edge)}
 .final-action{text-align:left}}
 @media (max-width:700px){
 body{font-size:1.03rem}
@@ -234,11 +239,11 @@ margin-inline:0;padding-inline:0;background:#fff;color:#000}
 <h1 id="hero-title">I know which rural organizations already have money
 for what you sell.</h1>
 <p>That comes from Rural Health Atlas, a proprietary database I built
-from what the states publish about the CMS Rural Health Transformation
-Program. I track all fifty states.</p>
-<p>Rural Health Desk is me. I do this for companies selling into the
-program, and I'm just as glad to take on a rural hospital or clinic
-that's applying.</p>
+from the public record of the CMS Rural Health Transformation Program.
+I track all fifty states.</p>
+<p>Rural Health Desk is me. It’s the hands-on service I run on that
+database, for companies selling into the program and for the rural
+hospitals and clinics applying for the money themselves.</p>
 <div class="go">
 <a class="btn" href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program">Tell me what you sell</a>
 <span>I answer the same day.</span>
@@ -260,12 +265,12 @@ that's applying.</p>
 
 <section class="proof" aria-label="Current Rural Health Atlas coverage">
 <div class="proof-inner">
-<p class="proof-label">Awards last updated September 3, 2026</p>
+<p class="proof-label">Rural Health Atlas coverage. Latest award added September 3, 2026</p>
 <dl class="metrics">
 <div><dt>50</dt><dd>states tracked</dd></div>
 <div><dt>31,000+</dt><dd>organizations and care sites</dd></div>
 <div><dt>Nearly 1,000</dt><dd>healthcare vendors</dd></div>
-<div><dt>Roughly 1,000</dt><dd>funded awards, in 22 states so far</dd></div>
+<div><dt>More than 1,200</dt><dd>funded awards, from 29 states so far</dd></div>
 </dl>
 </div></section>
 
@@ -275,8 +280,8 @@ that's applying.</p>
 <h2 id="problem-title">Every state runs its own version of this.</h2></div>
 <div><p>CMS is putting $10 billion a year into rural health for five years,
 $50 billion in all, and the money goes out through the states.</p>
-<p>If you've gone looking for this money already, you've probably hit the
-same wall I did... it's confusing. One state posts a clean spreadsheet,
+<p>If you’ve gone looking for this money already, you’ve probably hit the
+same wall I did. One state posts a clean spreadsheet,
 the next buries its awards in a PDF appendix. I never found one place
 that had all of it.</p></div>
 </div>
@@ -285,46 +290,51 @@ that had all of it.</p></div>
 <section class="section" id="atlas" aria-labelledby="atlas-title">
 <div class="section-head">
 <div><p class="eyebrow">Rural Health Atlas</p>
-<h2 id="atlas-title">So I built one.</h2></div>
+<h2 id="atlas-title">Everything I could find, in one place.</h2></div>
 <p>This is not a login and a spreadsheet.</p>
 </div>
 <div class="atlas-grid">
 <article class="atlas-card"><p class="step-no">Awards</p>
-<h3>I read the awards as they're published.</h3>
-<p>I keep a dated copy of the document behind each one. Every funded row
-names the organization that received it, and the amount when a state
-discloses one. Some states don't.</p></article>
+<h3>I read the awards as they’re published.</h3>
+<p>The Atlas keeps a dated copy of the document behind each one, so a
+dead state link doesn’t take the evidence with it. Every funded row names
+the organization that received it, and the amount when a state discloses
+one. Some states don’t.</p></article>
 <article class="atlas-card"><p class="step-no">Organizations</p>
-<h3>Every award has an organization behind it.</h3>
-<p>A name in a state PDF isn't much on its own, so the Atlas ties
-recipients to the national roster I keep of critical access hospitals,
-health centers, rural health clinics, EMS agencies, health departments
-and tribal health entities, among others.</p></article>
+<h3>I connect awards to the organizations behind them.</h3>
+<p>A name in a state PDF isn’t much on its own, so the Atlas ties
+recipients to its national roster of critical access hospitals, health
+centers, rural health clinics, EMS agencies, health departments and
+tribal health entities, among others. A name that doesn’t match anything
+stays unlinked.</p></article>
 <article class="atlas-card"><p class="step-no">Vendors</p>
-<h3>Then I rank the fit.</h3>
+<h3>I rank the fit against what you sell.</h3>
 <p>The Atlas also tracks the companies selling into this work, in areas
 including workforce, behavioral health, health IT, remote patient
-monitoring, telehealth, imaging and diagnostics, and EMS. I use the
-scope text of the awards to rank which of them fit. The ranking is
-mine.</p></article>
+monitoring, telehealth, imaging and diagnostics, and EMS. The award’s
+own scope text is what I rank on, where there is one. I don’t publish
+how the scoring works.</p></article>
 </div>
-<p class="example"><b>Here's one row.</b> Kansas awarded Gove County Medical Center
-$3,000,000 for "Replacement of an unreliable mobile MRI with a permanent fixed MRI system, restoring reliable diagnostic imaging access for this 21-bed critical access hospital (CAH) in western Kansas." I filed it under imaging and diagnostics.
-Here is <a href="https://www.kdhe.ks.gov/DocumentCenter/View/58981/REH-CAP-and-RPGP-Award-Winners-PDF">the state's own document</a>.</p>
+<div class="example">
+<p class="eyebrow">One row from the Atlas</p>
+<p>Kansas awarded Gove County Medical Center <span class="amount">$3,000,000</span>
+for this:</p>
+<blockquote>Replacement of an unreliable mobile MRI with a permanent fixed MRI system, restoring reliable diagnostic imaging access for this 21-bed critical access hospital (CAH) in western Kansas.</blockquote>
+<p>I filed it under imaging and diagnostics.</p>
+<p class="src"><a href="https://www.kdhe.ks.gov/DocumentCenter/View/58981/REH-CAP-and-RPGP-Award-Winners-PDF">Read the state’s own document</a></p>
+</div>
 </section>
 
 <section class="desk-band" id="desk" aria-labelledby="desk-title">
 <div class="desk-inner"><div class="desk-grid">
 <div class="desk-copy"><p class="eyebrow">Rural Health Desk</p>
-<h2 id="desk-title">Finding the money is only the start of it.</h2>
-<p class="desk-lead">The database just tells me where to aim
-first.</p>
-<p>I run the whole process white-glove. I read every state's rules,
-deadlines, scoring, and how award money can actually reach a vendor. I
-wrote one rural health organization's entire application in under 24
-hours.</p></div>
+<h2 id="desk-title">The Atlas finds the money. I do the work.</h2>
+<p class="desk-lead">I run the whole process white-glove.</p>
+<p>I read every state’s rules, deadlines, scoring, and how award money
+can actually reach a vendor. I wrote one rural health organization’s
+entire application in under 24 hours.</p></div>
 <div>
-<p class="cap-lead">This is what lands in your inbox:</p>
+<p class="cap-lead">What you get:</p>
 <ul class="capabilities">
 <li><span>01</span>A ranked short list of the funded organizations whose
 award money can pay for what you sell.</li>
@@ -333,8 +343,8 @@ partnership gets formed before the application goes in.</li>
 <li><span>03</span>A named contact at each organization, and an email
 written on the award they actually received. There is no cold
 outreach.</li>
-<li><span>04</span>If you're the hospital or clinic, I write the
-application itself. I'll say up front if it can't be done well.</li>
+<li><span>04</span>If you’re the hospital or clinic, I write the
+application itself. I’ll say up front when it can’t be done well.</li>
 </ul>
 </div>
 </div></div>
@@ -346,8 +356,8 @@ srcset="/assets/justin-small.jpg 440w, /assets/justin.jpg 880w"
 sizes="(max-width:700px) 180px, 280px"
 alt="Justin Brilliant, outdoors, smiling" width="440" height="449"
 loading="lazy" decoding="async">
-<div><p class="eyebrow">Who you'd be emailing</p>
-<h2 id="about-title">I'm Justin Brilliant.</h2>
+<div><p class="eyebrow">Who you’d be emailing</p>
+<h2 id="about-title">I’m Justin Brilliant.</h2>
 <p>I got into this while helping a dermatology health-tech company work
 out which rural organizations had funding that could pay for its
 technology. Nobody could tell me where the money had gone. A press
@@ -357,17 +367,17 @@ was confusing.</p>
 <p>So I read them, and I compiled everything I found into one database.
 That database became Rural Health Atlas, and the whole thing has turned
 into my full-time job.</p>
-<p>If you ever want to know where a number came from, ask and I'll send
-you the document. And I'll tell you when something isn't a fit, rather
-than hand you a list that doesn't hold up.</p></div>
+<p>If you ever want to know where a number came from, ask and I’ll send
+you the document. And I’ll tell you when something isn’t a fit, rather
+than hand you a list that doesn’t hold up.</p></div>
 </section>
 
 <section class="final-cta" aria-labelledby="contact-title">
 <div class="final-inner"><div>
 <p class="eyebrow">Next step</p>
-<h2 id="contact-title">So, what do you sell?</h2>
+<h2 id="contact-title">Tell me what you sell.</h2>
 <p>Send me a line about your product, or about what your hospital is
-trying to build, and I'll go look. I'd like to hear what you're working
+trying to build, and I’ll go look. I’d like to hear what you’re working
 on!</p>
 <address class="contact-lines">
 <a href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>
@@ -379,7 +389,8 @@ on!</p>
 </div></section>
 </main>
 <footer>
-<p>Rural Health Desk. &copy; 2026 Justin Brilliant.</p>
+<p><b>Rural Health Desk</b>: business development and grant work, run on
+Rural Health Atlas. &copy; 2026 Justin Brilliant.</p>
 </footer>
 </body>
 </html>
