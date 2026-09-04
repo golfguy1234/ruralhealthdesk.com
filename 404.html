@@ -110,15 +110,16 @@ transition:filter .15s ease}
 .hero .go span{color:var(--field-dim);font-size:1.05rem}
 .system-map{border:1px solid rgba(247,245,239,.24);padding:28px;
 background:rgba(0,0,0,.08)}
+.system-map>div+div{margin-top:30px}
 .system-label,.eyebrow,.proof-label,.step-no{font-family:var(--sans);
 font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .system-label{color:var(--wheat);margin-bottom:7px}
 .system-name{font-family:var(--sans);font-weight:750;font-size:1.25rem;
 color:var(--field-text);margin-bottom:16px}
-.flow-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.flow-list{list-style:none;padding:0;display:grid;
+grid-template-columns:repeat(3,1fr);column-gap:12px}
 .flow-list li{font-family:var(--sans);font-size:.78rem;color:var(--field-dim);
 padding:12px 6px 0;border-top:1px solid rgba(247,245,239,.35)}
-.flow-list li+li{margin-left:12px}
 .proof{max-inline-size:none;margin-inline:calc(-1*var(--pagepad));
 padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
 .proof-inner{padding-block:25px}
@@ -130,18 +131,23 @@ padding-inline:var(--pagepad);border-bottom:1px solid var(--edge)}
 line-height:1.1}
 .metrics dd{color:var(--muted);font-size:.86rem;margin-top:7px}
 .section{padding-top:var(--section)}
+#about{padding-top:calc(var(--section) + 32px)}
 .section-head{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1fr);
 gap:clamp(28px,6vw,80px);align-items:start;margin-bottom:40px}
 .eyebrow{color:var(--field);margin-bottom:12px}
 .section-head p:not(.eyebrow){color:var(--muted);font-size:1.08rem}
-.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge)}
-.atlas-card{padding:30px;min-height:230px}
-.atlas-card+.atlas-card{border-left:1px solid var(--edge)}
+.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+background:var(--edge);border:1px solid var(--edge)}
+.atlas-card{padding:30px;min-height:230px;background:var(--paper)}
 .atlas-card .step-no{color:var(--field);margin-bottom:38px}
 .atlas-card h3{margin-bottom:14px}
 .atlas-card p{color:var(--muted);font-size:.98rem}
-.example{margin-top:28px;font-size:1rem;color:var(--muted)}
-.example b{font-family:var(--sans);font-size:.92em;color:var(--ink)}
+.example{margin-top:28px;border:1px solid var(--edge);background:var(--mist);
+padding:26px 30px;font-size:1.02rem;color:var(--ink)}
+.example .amount{font-family:var(--sans);font-weight:800}
+.example blockquote{margin:14px 0;padding-left:18px;color:var(--muted);
+border-left:2px solid var(--wheat);font-size:.98rem}
+.example .src{font-family:var(--sans);font-size:.82rem;margin-top:14px}
 .desk-band{background:var(--field);color:var(--field-text);max-inline-size:none;
 margin:var(--section) calc(-1*var(--pagepad)) 0;padding-inline:var(--pagepad)}
 .desk-inner{padding-block:var(--section)}
@@ -184,7 +190,6 @@ footer p{max-inline-size:none}
 .metrics{grid-template-columns:repeat(2,1fr);row-gap:22px}
 .metrics div:nth-child(3){padding-left:0;border-left:0}
 .atlas-grid{grid-template-columns:1fr}.atlas-card{min-height:0}
-.atlas-card+.atlas-card{border-left:0;border-top:1px solid var(--edge)}
 .final-action{text-align:left}}
 @media (max-width:700px){
 body{font-size:1.03rem}
@@ -235,7 +240,8 @@ margin-inline:0;padding-inline:0;background:#fff;color:#000}
 <a href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program">justin@ruralhealthdesk.com</a>.</p>
 </main>
 <footer>
-<p>Rural Health Desk. &copy; 2026 Justin Brilliant.</p>
+<p><b>Rural Health Desk</b>: business development and grant work, run on
+Rural Health Atlas. &copy; 2026 Justin Brilliant.</p>
 </footer>
 </body>
 </html>
