@@ -44,7 +44,6 @@ img{display:block;max-width:100%;height:auto}
 .header-inner nav a:hover:after{width:100%}
 .header-contact{display:flex;align-items:center;gap:24px;text-decoration:none;font-size:.9rem;border:1px solid #BAC4B8;border-radius:2px;padding:12px 17px;min-height:48px;transition:background .2s,border-color .2s}
 .header-contact:hover{background:var(--pale);border-color:var(--field)}
-.header-contact span{font-size:1.3rem;line-height:1}
 .hero{background:var(--field);color:var(--paper);padding-top:clamp(42px,4.3vw,72px)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:clamp(44px,6.5vw,100px)}
 .scope-label{color:#CDD8CB;font-size:.76rem;letter-spacing:.115em;text-transform:uppercase;margin-bottom:24px;max-width:460px}
@@ -53,9 +52,7 @@ img{display:block;max-width:100%;height:auto}
 .hero-intro{font-size:1.05rem;line-height:1.75;color:#DAE2D7;max-width:500px;margin-top:25px}
 .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:28px}
 .hero-actions p{font-size:.875rem;color:#CDD8CB}
-.button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;min-height:54px;padding:14px 22px;font-size:.94rem;font-weight:650;border-radius:2px;text-decoration:none;transition:background .18s ease,transform .18s ease}
-.button span{font-size:1.4rem;font-weight:400;line-height:1;transition:transform .18s ease}
-.button:hover span{transform:translate(2px,-2px)}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 22px;font-size:.94rem;font-weight:650;border-radius:2px;text-decoration:none;transition:background .18s ease}
 .button-wheat{background:var(--wheat);color:var(--deep)}.button-wheat:hover{background:#F1D888}
 .hero a:focus-visible,.contact-section a:focus-visible{outline-color:var(--wheat)}
 .button-wheat:focus-visible{outline-color:var(--paper)}
@@ -72,10 +69,10 @@ img{display:block;max-width:100%;height:auto}
 .category{font-size:.76rem;color:var(--muted);margin-top:19px;line-height:1.65}
 .category strong{font-weight:500;color:var(--ink)}
 .source-link{border-top:1px solid var(--line);background:var(--pale);display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px 26px;font-size:.82rem;font-weight:600;text-decoration:none;min-height:54px;transition:background .18s}
-.source-link:hover{background:#E3E8DC}.source-link span{font-size:1.3rem}
+.source-link:hover{background:#E3E8DC}
 .award-note .source-link:focus-visible{outline-color:var(--ink);outline-offset:-5px}
 .hero-baseline{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #476151;margin-top:44px;font-size:.8rem;color:#CFDBCF}
-.hero-baseline a{display:flex;gap:36px;text-decoration:none;min-height:28px;align-items:center}.hero-baseline a span{font-size:1.2rem}
+.hero-baseline a{display:flex;text-decoration:none;min-height:28px;align-items:center}
 .section-intro{display:grid;grid-template-columns:1fr 2.4fr;gap:48px}
 .section-label{font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;color:var(--muted);padding-top:6px}
 .atlas-section{padding-block:clamp(64px,7vw,112px) 44px}
@@ -92,8 +89,7 @@ img{display:block;max-width:100%;height:auto}
 .desk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.24fr);gap:clamp(54px,9vw,144px)}
 .desk-heading h2{margin-top:20px;max-width:500px}
 .desk-heading>p:not(.section-label){color:var(--muted);font-size:1rem;max-width:380px;margin-top:24px}
-.text-link{display:inline-flex;align-items:center;gap:24px;min-height:48px;font-size:.92rem;font-weight:600;text-decoration:none;border-bottom:1px solid #95A38E;transition:gap .18s ease}
-.text-link:hover{gap:32px}.text-link span{font-size:1.4rem;font-weight:400;line-height:1}
+.text-link{display:inline-flex;align-items:center;min-height:48px;font-size:.92rem;font-weight:600;text-decoration:none;border-bottom:1px solid #95A38E}
 .desk-heading .text-link{margin-top:23px}
 .deliverables article{border-top:1px solid #C7D1C2;padding:25px 0 28px}
 .deliverables article:last-child{padding-bottom:0}
@@ -143,9 +139,9 @@ img{display:block;max-width:100%;height:auto}
 <header class="site-header"><div class="shell header-inner">
 <a class="wordmark" href="/" aria-label="Rural Health Desk home"><span>Rural Health</span><span>Desk<span class="brand-dot">.</span></span></a>
 <nav aria-label="Primary"><a href="/#atlas">The Atlas</a><a href="/#desk">Work with me</a><a href="/#about">About Justin</a></nav>
-<a class="header-contact" href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program">Email Justin <span aria-hidden="true">↗</span></a>
+<a class="header-contact" href="mailto:justin@ruralhealthdesk.com?subject=Where%20I%20fit%20in%20the%20Rural%20Health%20Transformation%20Program">Email Justin</a>
 </div></header>
-<main id="main" class="not-found shell"><p class="section-label">Page not found</p><h1>Let’s get you<br>back to the Desk.</h1><p>The page you’re looking for isn’t here.</p><a class="button button-green" href="/">Go to the homepage <span aria-hidden="true">↗</span></a><p>Or email <a href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>.</p></main><footer class="site-footer"><div class="shell footer-inner">
+<main id="main" class="not-found shell"><p class="section-label">Page not found</p><h1>Let’s get you<br>back to the Desk.</h1><p>The page you’re looking for isn’t here.</p><a class="button button-green" href="/">Go to the homepage</a><p>Or email <a href="mailto:justin@ruralhealthdesk.com">justin@ruralhealthdesk.com</a>.</p></main><footer class="site-footer"><div class="shell footer-inner">
 <a class="footer-brand" href="/">Rural Health Desk<span aria-hidden="true">.</span></a>
 <p>Business development and grant strategy, powered by Rural Health Atlas.</p>
 <p class="copyright">&copy; 2026 Justin Brilliant</p>
